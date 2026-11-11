@@ -6,6 +6,13 @@
         "priority": "High",
         "due": "2026-11-10 2pm",
         "completed": false
-
+    },
+    {
+        "id": "e110da3922303c4a07f84b3375690501",
+        "title": "new homework",
+        "description": "homework due monday",
+        "priority": "Medium",
+        "due": null,
+        "completed": false
     }
 ]
