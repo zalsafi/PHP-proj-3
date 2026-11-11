@@ -1,5 +1,4 @@
 
-
 * {
     box-sizing: border-box;
 }
@@ -7,13 +6,14 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fff5f7;
-    color: #59434d;
+    background: #ffd5d5;
+    color: #604B49;
 }
 
+/* Header */
 header {
-    background: #e9b8c8;
-    color: #593b49;
+    background: #E8C5C2;
+    color: #604B49;
     padding: 30px 20px;
     text-align: center;
 }
@@ -25,35 +25,38 @@ header h1 {
 }
 
 header p {
-    color: #704e5d;
+    color: #795D5B;
     margin-bottom: 0;
 }
 
+/* Main content */
 main {
     width: 90%;
     max-width: 850px;
     margin: 35px auto;
     padding: 30px;
-    background: #ffffff;
+    background: #ffe6e6;
     border-radius: 14px;
-    box-shadow: 0 4px 18px rgba(180, 110, 135, 0.10);
+    box-shadow: 0 4px 18px rgba(130, 85, 80, 0.10);
 }
 
+/* Headings */
 h2 {
     margin-top: 0;
-    color: #87566b;
+    color: #895F62;
     font-size: 25px;
 }
 
 h3 {
     margin-top: 0;
-    color: #87566b;
+    color: #895F62;
 }
 
 p {
     line-height: 1.5;
 }
 
+/* Forms */
 label {
     display: block;
     margin: 16px 0 7px;
@@ -66,20 +69,20 @@ textarea,
 select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #efd5df;
+    border: 1px solid #E8D2CA;
     border-radius: 8px;
     font-size: 15px;
     font-family: inherit;
-    background: #fffafb;
-    color: #59434d;
+    background: #FBF1EC;
+    color: #604B49;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: #d88ba8;
-    box-shadow: 0 0 0 3px rgba(216, 139, 168, 0.15);
+    border-color: #C98F91;
+    box-shadow: 0 0 0 3px rgba(201, 143, 145, 0.15);
 }
 
 textarea {
@@ -87,14 +90,15 @@ textarea {
     resize: vertical;
 }
 
+/* Buttons and links */
 button,
 a {
     display: inline-block;
     padding: 11px 17px;
     border: none;
     border-radius: 8px;
-    background: #d88ba8;
-    color: white;
+    background: #C98F91;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
@@ -104,19 +108,20 @@ a {
 
 button:hover,
 a:hover {
-    background: #c87596;
+    background: #B77A7E;
 }
 
+/* Task cards */
 .task {
     margin-top: 18px;
     padding: 20px;
-    border: 1px solid #f0dce4;
+    border: 1px solid #E8D2CA;
     border-radius: 10px;
-    background: #fff9fb;
+    background: #F8EAE5;
 }
 
 .task p {
-    color: #795e69;
+    color: #795D5B;
 }
 
 .task form {
@@ -129,25 +134,27 @@ a:hover {
 }
 
 .task form:last-child button {
-    background: #c98291;
+    background: #C98291;
 }
 
 .task form:last-child button:hover {
-    background: #b66b7c;
+    background: #B66B7C;
 }
 
+/* Messages */
 .error {
-    color: #c0395b;
+    color: #B94D60;
     font-size: 14px;
 }
 
 .success {
     padding: 13px;
     border-radius: 8px;
-    background: #fceaf0;
-    color: #87566b;
+    background: #F1DEDA;
+    color: #895F62;
 }
 
+/* Mobile layout */
 @media (max-width: 600px) {
     main {
         width: 94%;
