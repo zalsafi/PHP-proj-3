@@ -12,7 +12,7 @@ body {
 
 /* Header */
 header {
-    background: #E8C5C2;
+    background: #ffbcbf;
     color: #604B49;
     padding: 30px 20px;
     text-align: center;
@@ -97,7 +97,7 @@ a {
     padding: 11px 17px;
     border: none;
     border-radius: 8px;
-    background: #C98F91;
+    background: #df9da0;
     color: #FFFFFF;
     text-decoration: none;
     font-size: 14px;
