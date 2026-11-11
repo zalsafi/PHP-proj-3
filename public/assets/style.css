@@ -1,4 +1,5 @@
 
+
 * {
     box-sizing: border-box;
 }
@@ -6,13 +7,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f3f5fa;
-    color: #263247;
+    background: #fff5f7;
+    color: #59434d;
 }
 
 header {
-    background: #263b63;
-    color: white;
+    background: #e9b8c8;
+    color: #593b49;
     padding: 30px 20px;
     text-align: center;
 }
@@ -24,7 +25,7 @@ header h1 {
 }
 
 header p {
-    color: #d6deed;
+    color: #704e5d;
     margin-bottom: 0;
 }
 
@@ -33,19 +34,20 @@ main {
     max-width: 850px;
     margin: 35px auto;
     padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 18px rgba(30, 45, 70, 0.07);
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(180, 110, 135, 0.10);
 }
 
 h2 {
     margin-top: 0;
+    color: #87566b;
     font-size: 25px;
 }
 
 h3 {
     margin-top: 0;
-    color: #263b63;
+    color: #87566b;
 }
 
 p {
@@ -64,19 +66,20 @@ textarea,
 select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d5dce7;
-    border-radius: 7px;
+    border: 1px solid #efd5df;
+    border-radius: 8px;
     font-size: 15px;
     font-family: inherit;
-    background: #fff;
+    background: #fffafb;
+    color: #59434d;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: #F0DCE4;
-    box-shadow: 0 0 0 3px rgba(82, 120, 199, 0.12);
+    border-color: #d88ba8;
+    box-shadow: 0 0 0 3px rgba(216, 139, 168, 0.15);
 }
 
 textarea {
@@ -89,8 +92,8 @@ a {
     display: inline-block;
     padding: 11px 17px;
     border: none;
-    border-radius: 7px;
-    background: #FFF5F7;
+    border-radius: 8px;
+    background: #d88ba8;
     color: white;
     text-decoration: none;
     font-size: 14px;
@@ -101,19 +104,19 @@ a {
 
 button:hover,
 a:hover {
-    background: #fccbd3;
+    background: #c87596;
 }
 
 .task {
     margin-top: 18px;
     padding: 20px;
-    border: 1px solid #e2e7ef;
+    border: 1px solid #f0dce4;
     border-radius: 10px;
-    background: #fafbfe;
+    background: #fff9fb;
 }
 
 .task p {
-    color: #586579;
+    color: #795e69;
 }
 
 .task form {
@@ -126,23 +129,23 @@ a:hover {
 }
 
 .task form:last-child button {
-    background: #d9535d;
+    background: #c98291;
 }
 
 .task form:last-child button:hover {
-    background: #b93843;
+    background: #b66b7c;
 }
 
 .error {
-    color: #c0392b;
+    color: #c0395b;
     font-size: 14px;
 }
 
 .success {
     padding: 13px;
-    border-radius: 7px;
-    background: #e8f5ed;
-    color: #287347;
+    border-radius: 8px;
+    background: #fceaf0;
+    color: #87566b;
 }
 
 @media (max-width: 600px) {
