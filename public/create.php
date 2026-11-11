@@ -18,13 +18,15 @@ require_once__DIR__. '/../src/validation.php';
     </header>
 
     <main> 
-        <h2>Create Task</h2>
-        <form action="create.php" method="POST>
+        <h2>Add a Task</h2>
+        <form action="create.php" method="POST">
         <label for="title"> Task Title:</label>
         <input type="text" id="title" name="title" required>
+
         <label for="description"> Task Description:</label>
         <textarea id="description" name="description" required></textarea>
         <button type="submit">Create Task</button>
+        <a href="index.php">Cancel</a>
         </form>
     </main>
 </body>
