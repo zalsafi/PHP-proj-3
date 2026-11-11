@@ -75,7 +75,7 @@ input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: #b199a6;
+    border-color: #F0DCE4;
     box-shadow: 0 0 0 3px rgba(82, 120, 199, 0.12);
 }
 
@@ -90,7 +90,7 @@ a {
     padding: 11px 17px;
     border: none;
     border-radius: 7px;
-    background: #4268ad;
+    background: #FFF5F7;
     color: white;
     text-decoration: none;
     font-size: 14px;
@@ -101,7 +101,7 @@ a {
 
 button:hover,
 a:hover {
-    background: #304f8a;
+    background: #fccbd3;
 }
 
 .task {
