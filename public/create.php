@@ -2,19 +2,27 @@
 require_once__DIR__. '/../src/validation.php';
 require_once__DIR__. '/../src/storage.php';
 
-?>
-$errors = [];
-$input = [];
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+$errors = []; 
+$input = [
+    'title' => '',
+    'description' => '',
+    'priority' => 'Medium',
+    'due' => ''
+];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { // original code was not working so ai prompt "PHP code not working help me fix it"
     $input = [
         'title' => $_POST['title'] ?? '',
         'description' => $_POST['description'] ?? '',
-        'priority' => $_POST['priority'] ?? '',
-        'due_date' => $_POST['due_date'] ?? '',
+        'priority' => $_POST['priority'] ?? 'Medium',
+        'due' => $_POST['due'] ?? ''
     ];
-    $result = validate_task($input);
+
+    $result = validateTask($input);
     $errors = $result['errors'];
-  if (empty($errors)) {
+
+    if (empty($errors)) {
         $tasks = getTasks();
 
         $tasks[] = [
@@ -35,10 +43,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 }
+
 function escape($value): string {
     return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
-}
-
+} ?>
 
 <!DOCTYPE html>
 <html lang="en">
