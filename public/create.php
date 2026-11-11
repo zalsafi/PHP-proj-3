@@ -6,9 +6,40 @@ require_once__DIR__. '/../src/storage.php';
 $errors = [];
 $input = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    'title' => $_POST['title'] ?? '',
-    'description' => $_POST['description'] ?? '',
-   
+    $input = [
+        'title' => $_POST['title'] ?? '',
+        'description' => $_POST['description'] ?? '',
+        'priority' => $_POST['priority'] ?? '',
+        'due_date' => $_POST['due_date'] ?? '',
+    ];
+    $result = validate_task($input);
+    $errors = $result['errors'];
+  if (empty($errors)) {
+        $tasks = getTasks();
+
+        $tasks[] = [
+            'id' => bin2hex(random_bytes(16)),
+            'title' => $result['data']['title'],
+            'description' => $result['data']['description'],
+            'priority' => $result['data']['priority'],
+            'due' => $result['data']['due'],
+            'completed' => false
+        ];
+
+        saveTasks($tasks);
+
+        session_start();
+        $_SESSION['flash'] = 'Task created successfully!';
+
+        header('Location: index.php');
+        exit;
+    }
+}
+function escape($value): string {
+    return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,16 +59,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form action="create.php" method="POST">
         <label for="title"> Task Title:</label>
         <input type="text" id="title" name="title" required>
+        <?php if (isset($errors['title'])): ?>
+            <p class="error"><?= escape($errors['title']) ?></p>
+        <?php endif; ?>
 
         <label for="description"> Task Description:</label>
         <textarea id="description" name="description"></textarea>
+        <?php if (isset($errors['description'])): ?>
+            <p class="error"><?= escape($errors['description']) ?></p>
+        <?php endif; ?>
 
-        <label for="priority"> Priority:</label>
+        <label for="priority">Priority</label>
         <select id="priority" name="priority">
+            <?php foreach (['Low', 'Medium', 'High'] as $priority): ?>
+                <option value="<?= $priority ?>"
+                    <?= $input['priority'] === $priority ? 'selected' : '' ?>>
+                    <?= $priority ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <?php if (isset($errors['priority'])): ?>
+            <p class="error"><?= escape($errors['priority']) ?></p>
+        <?php endif; ?>
 
         <label for="due_date"> Due Date:</label>
-        <input type="date" id="due_date" name="due_date">
-        
+        <input type="date" id="due_date" name="due_date" value="<?= escape($input['due']) ?>">
+        <?php if (isset($errors['due'])): ?>
+            <p class="error"><?= escape($errors['due']) ?></p>
+        <?php endif; ?>
         <button type="submit">Create Task</button>
         <a href="index.php">Cancel</a>
         </form>
