@@ -1,8 +1,14 @@
 <?php 
 require_once__DIR__. '/../src/validation.php';
+require_once__DIR__. '/../src/storage.php';
 
 ?>
-
+$errors = [];
+$input = [];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    'title' => $_POST['title'] ?? '',
+    'description' => $_POST['description'] ?? '',
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +30,14 @@ require_once__DIR__. '/../src/validation.php';
         <input type="text" id="title" name="title" required>
 
         <label for="description"> Task Description:</label>
-        <textarea id="description" name="description" required></textarea>
+        <textarea id="description" name="description"></textarea>
+
+        <label for="priority"> Priority:</label>
+        <select id="priority" name="priority">
+
+        <label for="due_date"> Due Date:</label>
+        <input type="date" id="due_date" name="due_date">
+        
         <button type="submit">Create Task</button>
         <a href="index.php">Cancel</a>
         </form>
