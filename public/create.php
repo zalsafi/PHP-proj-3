@@ -1,0 +1,31 @@
+<?php 
+require_once__DIR__. '/../src/validation.php';
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Create Task</title>
+    <link rel='stylesheet' href='assets/style.css'>
+</head>
+<body>
+    <header>
+        <h1>TaskPad</h1>
+        <p>Create a new task below.</p>
+    </header>
+
+    <main> 
+        <h2>Create Task</h2>
+        <form action="create.php" method="POST>
+        <label for="title"> Task Title:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="description"> Task Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <button type="submit">Create Task</button>
+        </form>
+    </main>
+</body>
+</html>
