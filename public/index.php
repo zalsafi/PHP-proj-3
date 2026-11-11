@@ -42,7 +42,7 @@ function escape($value): string {
 
 <header>
     <h1>TaskPad</h1>
-    <p>Your simple task tracker.</p>
+    <p>Your simple task tracker</p>
 </header>
 
 <main>
