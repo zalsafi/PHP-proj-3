@@ -11,5 +11,3 @@ Desktop view:
 ![alt text](<Screenshot 2026-11-11 133739.png>)
 
 Tablet view: ![alt text](<Screenshot 2026-11-11 133739-1.png>)
-
-UML PDF
